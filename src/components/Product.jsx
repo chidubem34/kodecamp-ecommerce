@@ -26,13 +26,13 @@ const Product = ({ product }) => {
           </button>
 
           <Link
-            to={`/products/${id}`}
+            to={`/kodecamp-ecommerce/products/${id}`}
             className='w-10 h-10 bg-white flex justify-center items-center text-black drop-shadow-xl'><Eye />
           </Link>
         </div>
 
       </div>
-      <Link to={`/products/${id}`}>
+      <Link to={`/kodecamp-ecommerce/products/${id}`}>
       <div className='font-semibold font-sans text-gray-500 mb-1'>{title}</div>
       </Link>
       <div className='font-semibold'>${price}</div> 

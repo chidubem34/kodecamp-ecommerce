@@ -20,7 +20,7 @@ const CartItem = ({ item }) => {
         <div className='w-full flex flex-col'>
           <div className='flex justify-between mb-2'>
             <Link
-              to={`/products/${id}`}
+              to={`/kodecamp-ecommerce/products/${id}`}
               className='text-sm uppercase font-medium max-w-[240px] text-primary hover:underline'>
               {title}
             </Link>
