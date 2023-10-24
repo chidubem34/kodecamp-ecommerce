@@ -21,7 +21,7 @@ const Header = () => {
     <header
       className={`${isActive ? 'bg-white py-4 shadow-xl' : 'py-4 bg-white'} fixed w-full z-10 transition-all flex justify-between shadow-md px-[35px] py-4 items-center`}
     >
-      <Link to={'/'}>
+      <Link to={'/kodecamp-ecommerce/'}>
         <span className='font-bold text-blue-500 text-xl'>Kodecamp <span className='text-green-500'>Ecommerce</span></span>
       </Link>
       <div onClick={() => setIsOpen(!isOpen)} className='cursor-pointer flex relative max-w-[50px]'>
