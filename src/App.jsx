@@ -11,7 +11,7 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/kodecamp-ecommerce/' element={<Home />} />
           <Route path='/products/:id' element={<ProductDetails />} />
         </Routes>
         <Sidebar />
