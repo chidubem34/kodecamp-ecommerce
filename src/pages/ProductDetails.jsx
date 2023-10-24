@@ -26,7 +26,7 @@ const ProductDetails = () => {
             <img className='max-w-[200px] lg:max-w-sm' src={image} alt="" />
           </div>
           <div className='flex-1 text-center lg:text-left'>
-            <h1 className='lg:text-[26px] font-medium mb-2 max-w-[450px] mx-auto lg:mx-0'>{title}</h1>
+            <h1 className='sm:text-[16px] lg:text-[26px] font-medium mb-2 max-w-[450px] mx-auto lg:mx-0'>{title}</h1>
             <div className='text-xl text-red-500 font-medium mb-6'>
               ${price}
             </div>
