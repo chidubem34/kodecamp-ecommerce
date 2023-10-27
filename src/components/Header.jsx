@@ -9,7 +9,7 @@ import { ShoppingBag } from 'phosphor-react'
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const { isOpen, setIsOpen } = useContext(SidebarContext);
-  const { itemAmount } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -26,7 +26,7 @@ const Header = () => {
       </Link>
       <div onClick={() => setIsOpen(!isOpen)} className='cursor-pointer flex relative max-w-[50px]'>
         <ShoppingBag className='text-2xl' />
-        <div className='bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center'>{itemAmount}</div>
+        <div className='bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center'>{cart.length}</div>
       </div>
     </header>
   )

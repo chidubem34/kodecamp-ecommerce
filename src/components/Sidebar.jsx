@@ -13,7 +13,7 @@ const Sidebar = () => {
     <div className={`${isOpen ? 'right-0' : '-right-full'} w-full bg-white fixed top-0 min-h-[100vh] overflow-auto shadow-2xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-20 px-3`}>
 
       <div className='flex items-center justify-between py-4 border-b' >
-        <div className='uppercase text-sm font-semibold'>Shopping Bag ({itemAmount})</div>
+        <div className='uppercase text-sm font-semibold'>Shopping Bag ({cart.length})</div>
         <div onClick={handleClose} className='cursor-pointer w-8 h-8 flex justify-center items-center'>
           <ArrowRight />
         </div>
