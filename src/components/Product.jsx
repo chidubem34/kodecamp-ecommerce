@@ -14,7 +14,7 @@ const Product = ({ product }) => {
   const { id, title, price, image, rating } = product
   return (
     <div>
-      <div className='border border-[#e4e4e4] h-[300px] mb-4 relative group transition overflow-hidden'>
+      <div className='h-[300px] shadow-lg rounded mb-4 relative group transition overflow-hidden'>
         <div className='w-full h-full flex justify-center items-center'>
           {/* {img} */}
           <div className='w-[200px] mx-auto flex justify-center items-center'>
@@ -33,20 +33,21 @@ const Product = ({ product }) => {
             className='w-10 h-10 bg-white flex justify-center items-center text-black drop-shadow-xl'><Eye />
           </Link>
         </div>
-
       </div>
-      <Link to={`/kodecamp-ecommerce/products/${id}`}>
-        <div className='font-semibold font-sans text-gray-500 mb-1'>{title}</div>
-      </Link>
-      <div className='font-semibold'>${price}</div>
-      <div className='flex gap-1'>
-        {[...Array(Math.round(rating.rate))].map((e, i) => (
-          <BsStarFill key={i} className='text-yellow-500' />
-        ))}
+      <div className='p-2'>
+        <Link to={`/kodecamp-ecommerce/products/${id}`}>
+          <div className='font-semibold font-sans text-gray-500 mb-1'>{title}</div>
+        </Link>
+        <div className='font-semibold'>${price}</div>
+        <div className='flex gap-1'>
+          {[...Array(Math.round(rating.rate))].map((e, i) => (
+            <BsStarFill key={i} className='text-yellow-500' />
+          ))}
 
-        {[...Array(5 - Math.round(rating.rate))].map((e, i) => (
-          <BsStar key={i} />
-        ))}
+          {[...Array(5 - Math.round(rating.rate))].map((e, i) => (
+            <BsStar key={i} />
+          ))}
+        </div>
       </div>
     </div>
   )

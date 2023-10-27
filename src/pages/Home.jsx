@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import { ProductContext } from "../contexts/ProductContext";
 import Product from "../components/Product";
@@ -13,6 +14,7 @@ const Home = () => {
                     {isLoading ? <p>Loading...</p> :
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 max-w-sm justify-content-center md:max-w-none md:mx-0">
                             {products.length > 0 && products.map((product) => {
+                                // eslint-disable-next-line no-unused-vars
                                 const { id, title, price, description, category, image, rating } = product;
                                 return (
                                     <Product product={product} key={id} />
