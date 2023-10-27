@@ -18,7 +18,7 @@ const Sidebar = () => {
           <ArrowRight />
         </div>
       </div>
-      <div className='flex flex-col gap-y-2 h-[440px] lg:h-[640px] overflow-y-auto overflow-x-hidden border-b'>
+      <div className='flex flex-col gap-y-2 h-[460px] overflow-y-auto overflow-x-hidden border-b'>
         {cart.map(item => {
           return <CartItem item={item} key={item.id} />
         })}
@@ -33,6 +33,15 @@ const Sidebar = () => {
             <Trash />
           </div>
         </div>
+
+        <div className='bg-gray-300 text-center  py-3 text-md rounded' role='button'>
+          View Cart
+        </div>
+
+        <div className='bg-gray-700 text-center text-white py-3 text-md rounded' role='button'>
+          Checkout
+        </div>
+
       </div>
     </div>
   )

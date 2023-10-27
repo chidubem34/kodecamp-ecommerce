@@ -1,16 +1,19 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { Plus, Eye } from 'phosphor-react'
-import {CartContext} from '../contexts/CartContext'
+import { BsStarFill, BsStar } from 'react-icons/bs'
+import { CartContext } from '../contexts/CartContext'
 
 // eslint-disable-next-line react/prop-types
 const Product = ({ product }) => {
-  const {addToCart} = useContext(CartContext)
+  const { addToCart } = useContext(CartContext)
   // console.log(product)
   // eslint-disable-next-line react/prop-types
   const { id, title, price, image, rating } = product
   return (
-    <div> 
+    <div>
       <div className='border border-[#e4e4e4] h-[300px] mb-4 relative group transition overflow-hidden'>
         <div className='w-full h-full flex justify-center items-center'>
           {/* {img} */}
@@ -33,10 +36,19 @@ const Product = ({ product }) => {
 
       </div>
       <Link to={`/kodecamp-ecommerce/products/${id}`}>
-      <div className='font-semibold font-sans text-gray-500 mb-1'>{title}</div>
+        <div className='font-semibold font-sans text-gray-500 mb-1'>{title}</div>
       </Link>
-      <div className='font-semibold'>${price}</div> 
-    </div> 
+      <div className='font-semibold'>${price}</div>
+      <div className='flex gap-1'>
+        {[...Array(Math.round(rating.rate))].map((e, i) => (
+          <BsStarFill key={i} className='text-yellow-500' />
+        ))}
+
+        {[...Array(5 - Math.round(rating.rate))].map((e, i) => (
+          <BsStar key={i} />
+        ))}
+      </div>
+    </div>
   )
 }
 
