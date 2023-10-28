@@ -11,7 +11,7 @@ const Home = () => {
         <div>
             <section className="py-16">
                 <div className="mx-10">
-                    {isLoading ? <p>Loading...</p> :
+                    {isLoading ? <div className="h-screen justify-center text-3xl font-bold tracking-widest items-center flex">Loading...</div> :
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 max-w-sm justify-content-center md:max-w-none md:mx-0">
                             {products.length > 0 && products.map((product) => {
                                 // eslint-disable-next-line no-unused-vars
