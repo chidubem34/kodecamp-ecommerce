@@ -14,7 +14,7 @@ const Product = ({ product }) => {
   const { id, title, price, image, rating } = product
   return (
     <div>
-      <div className='h-[300px] shadow-lg rounded mb-4 relative group transition overflow-hidden'>
+      <div className='h-[300px] shadow-xl rounded mb-4 relative group transition overflow-hidden'>
         <div className='w-full h-full flex justify-center items-center'>
           {/* {img} */}
           <div className='w-[200px] mx-auto flex justify-center items-center'>
