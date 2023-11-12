@@ -2,6 +2,9 @@
 import React, { useContext } from "react";
 import { ProductContext } from "../contexts/ProductContext";
 import Product from "../components/Product";
+import Header from "../components/Header";
+import Footer from "../components/Footer"
+import Sidebar from "../components/Sidebar"
 
 const Home = () => {
 
@@ -9,6 +12,8 @@ const Home = () => {
     // console.log(products)
     return (
         <div>
+            <Header />
+            <Sidebar />
             <section className="py-16">
                 <div className="mx-10">
                     {isLoading ? <div className="h-screen justify-center text-3xl font-bold tracking-widest items-center flex">Loading...</div> :
@@ -24,6 +29,7 @@ const Home = () => {
                     }
                 </div>
             </section>
+            <Footer />
         </div>)
 }
 
